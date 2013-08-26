@@ -14,7 +14,7 @@ ARCH = linux
 #Compiler Flags
 ARFLAGS=rs
 CFLAGS = -g -O0 -Wall -D$(ARCH) -DIPv4 -DLWIP_DEBUG -pedantic \
-         -Wswtich-default -Wextra -Wundef -Wshadow -Wbad-function-cast \
+         -Wswitch-default -Wextra -Wundef -Wshadow -Wbad-function-cast \
          -Wc++-compat -Wmissing-prototypes -Wredundant-decls -Wnested-externs 
 LDFLAGS = -lutil -pthread
 
@@ -54,15 +54,10 @@ LWIPLIB = liblwip4.a
 APPLIB = liblwipapps.a
 APPOBJS = $(notdir $(APPFILES:.c=.o))
 
-LWIPFILES = $(COREFILES) $(CORE4FILES) $(APIFILES) $(NETIFFILES) $(ARCHFILES)
-LWIPFILESW = $(wildcard $(LWIPFILES))
-LWIPOBJ = $(notdir $(LWIPFILESW:.c=.o))
-
-LWIPLIB = liblwip4.a
-APPLIB = liblwipapps.a
-APPOBJS = $(notdir $(APPFILES:.c=.o))
 
 .PHONY: all
+.PHONY: clean
+
 all: http_server
 
 %.o: 
