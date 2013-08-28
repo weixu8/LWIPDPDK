@@ -23,7 +23,7 @@ LDFLAGS = -lutil -pthread
 CFLAGS := $(CFLAGS) \
           -I. -I$(CONTRIBDIR)/apps/httpserver_raw -I$(LWIPDIR)/include -I$(LWIPARCH)/include -I$(LWIPDIR)/include/ipv4 -I$(LWIPDIR) \
           -I${RTE_SDK}/${RTE_TARGET}/include -L$(RTE_SDK)/$(RTE_TARGET)/lib \
-	  -lethdev -lrte_eal -lrte_hash -lrte_lpm -lrte_malloc -lrte_mbuf -lrte_mempool -lrte_pmd_igb -lrte_pmd_ixgbe -lrte_ring,-lrte_timer 
+	  -lethdev -lrte_eal -lrte_hash -lrte_lpm -lrte_malloc -lrte_mbuf -lrte_mempool -lrte_pmd_igb -lrte_pmd_ixgbe -lrte_ring -lrte_timer 
  
 #Core Files for LWIP
 COREFILES = $(LWIPDIR)/core/mem.c $(LWIPDIR)/core/memp.c $(LWIPDIR)/core/netif.c \
@@ -55,15 +55,15 @@ APPLIB = liblwipapps.a
 APPOBJS = $(notdir $(APPFILES:.c=.o))
 
 
-.PHONY: all
 .PHONY: clean
 
 all: http_server
 
 %.o: 
-	$(CC) $(CFLAGS) -o $(<:.o=.c)
+	$(CC) $(CFLAGS) -c $(<:.o=.c)
 
-clean: rm -f *.o $(LWIPLIB) $(APPLIB) *.s .depend* *.core core
+clean: 
+	rm -f *.o $(LWIPLIB) $(APPLIB) *.s .depend* *.core core
 
 depend dep: .depend
 
@@ -80,4 +80,4 @@ $(LWIPLIB): $(LWIPOBJS)
 	$(CC) $(CFLAGS) -MM $^ > .depend || rm -f .depend
 
 http_server: .depend $(LWIPLIB) $(APPLIB) http_server.o $(APPFILES)
-	$(CC) $(CFLAGS) $(LDFLAGS) -o simhost simhost.o $(APPLIB) $(LWIPLIB)	
+	$(CC) $(CFLAGS) $(LDFLAGS) -o http_server http_server.o $(APPLIB) $(LWIPLIB)	
