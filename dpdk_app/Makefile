@@ -31,7 +31,7 @@
 # 
 #  version: DPDK.L.1.2.3-3
 
-RTE_SDK =~/dpdk-1.2.3r2
+RTE_SDK =/home/peter/dpdk-1.2.3r2
 
 
 # Default target, can be overriden by command line or environment
@@ -40,14 +40,24 @@ RTE_TARGET ?= x86_64-default-linuxapp-gcc
 include $(RTE_SDK)/mk/rte.vars.mk
 
 # binary name
-LIB  = dpdklib.a
+APP = http_server
+ARCH = linux
+LWIPDIR = $(CONTRIBDIR)/../lwip/src
+CONTRIBDIR = /home/peter/LWIP/contrib-1.4.1
+LWIPARCH= $(CONTRIBDIR)/ports/unix
 
 # all source are stored in SRCS-y
-SRCS-y := dpdk.c
+SRCS-y := dpdk.c http_server.c ../lwiplib/liblwip4.a ../lwiplib/liblwipapps.a
 
+CFLAGS += -Wall -D$(ARCH)
+CFLAGS += -pedantic -Wextra -Wshadow -Wbad-function-cast -Wc++-compat 
+CFLAGS += -I. -I$(CONTRIBDIR)/apps/httpserver_raw -I$(LWIPDIR)/include -I$(LWIPARCH)/include -I$(LWIPDIR)/include/ipv4 -I$(LWIPDIR) -I../lwiplib
+CFLAGS += -Wmissing-prototypes -Wredundant-decls
 CFLAGS += -O0
 CFLAGS += -g
 CFLAGS += $(WERROR_FLAGS)
+
+LDFLAGS += -lutil
 
 # workaround for a gcc bug with noreturn attribute
 # http://gcc.gnu.org/bugzilla/show_bug.cgi?id=12603
@@ -55,4 +65,8 @@ ifeq ($(CONFIG_RTE_TOOLCHAIN_GCC),y)
 CFLAGS_main.o += -Wno-return-type
 endif
 
-include $(RTE_SDK)/mk/rte.lib.mk
+include $(RTE_SDK)/mk/rte.app.mk
+
+delete: 
+	rm -f  _* *.map *.o http_server *.*.o.*
+	rm -r build
