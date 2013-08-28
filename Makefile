@@ -22,9 +22,7 @@ LDFLAGS = -lutil -pthread
 #CFLAGS including -Is
 CFLAGS := $(CFLAGS) \
           -I. -I$(CONTRIBDIR)/apps/httpserver_raw -I$(LWIPDIR)/include -I$(LWIPARCH)/include -I$(LWIPDIR)/include/ipv4 -I$(LWIPDIR) \
-          -I${RTE_SDK}/${RTE_TARGET}/include -L$(RTE_SDK)/$(RTE_TARGET)/lib \
-	  -lethdev -lrte_eal -lrte_hash -lrte_lpm -lrte_malloc -lrte_mbuf -lrte_mempool -lrte_pmd_igb -lrte_pmd_ixgbe -lrte_ring -lrte_timer 
- 
+	  -Idpdklib 
 #Core Files for LWIP
 COREFILES = $(LWIPDIR)/core/mem.c $(LWIPDIR)/core/memp.c $(LWIPDIR)/core/netif.c \
             $(LWIPDIR)/core/pbuf.c $(LWIPDIR)/core/raw.c $(LWIPDIR)/core/stats.c \
@@ -52,8 +50,8 @@ LWIPOBJ = $(notdir $(LWIPFILESW:.c=.o))
 
 LWIPLIB = liblwip4.a
 APPLIB = liblwipapps.a
+DPDKLIB = dpdklib/build/lib/dpdklib.a
 APPOBJS = $(notdir $(APPFILES:.c=.o))
-
 
 .PHONY: clean
 
@@ -80,4 +78,4 @@ $(LWIPLIB): $(LWIPOBJS)
 	$(CC) $(CFLAGS) -MM $^ > .depend || rm -f .depend
 
 http_server: .depend $(LWIPLIB) $(APPLIB) http_server.o $(APPFILES)
-	$(CC) $(CFLAGS) $(LDFLAGS) -o http_server http_server.o $(APPLIB) $(LWIPLIB)	
+	$(CC) $(CFLAGS) $(LDFLAGS) -o http_server http_server.o $(APPLIB) $(LWIPLIB) $(DPDKLIB)

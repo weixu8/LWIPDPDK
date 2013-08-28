@@ -1,0 +1,685 @@
+http_server.o: http_server.c http_server.h dpdklib/dpdk.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/init.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp_std.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/sys.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/sys_arch.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/stats.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp_impl.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/icmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/inet_chksum.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcpip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/api_msg.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/igmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/api.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netifapi.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/timers.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/sockets.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/inet.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/netif/unixif.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/netif/tcpdump.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/perf.h \
+ /home/peter/LWIP/contrib-1.4.1/apps/httpserver_raw/httpd.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/raw.h
+mem.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/core/mem.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/sys.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/sys_arch.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/stats.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp_std.h
+memp.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/core/memp.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp_std.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/udp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/raw.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp_impl.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/icmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/igmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/api.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/sys.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/sys_arch.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/api_msg.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcpip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netifapi.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/timers.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/stats.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/netif/etharp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_frag.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/snmp_structs.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/snmp_msg.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/snmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/dns.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/netif/ppp_oe.h
+netif.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/core/netif.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp_impl.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/icmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/snmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/igmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/netif/etharp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/stats.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp_std.h
+pbuf.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/core/pbuf.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/stats.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp_std.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/sys.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/sys_arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/perf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp_impl.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/icmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcpip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/api_msg.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/igmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/api.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netifapi.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/timers.h
+raw.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/core/raw.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp_std.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/raw.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/stats.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/perf.h
+stats.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/core/stats.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/stats.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp_std.h
+sys.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/core/sys.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/sys.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/sys_arch.h
+tcp.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/core/tcp.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp_std.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/snmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/icmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp_impl.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/stats.h
+tcp_in.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/core/tcp_in.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp_impl.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/icmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp_std.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/inet_chksum.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/stats.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/snmp.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/perf.h
+tcp_out.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/core/tcp_out.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp_impl.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/icmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp_std.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/inet_chksum.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/stats.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/snmp.h
+udp.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/core/udp.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/udp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp_std.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/inet_chksum.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/icmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/stats.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/snmp.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/perf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/dhcp.h
+dhcp.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/core/dhcp.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h
+init.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/core/init.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/init.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/stats.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp_std.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/sys.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/sys_arch.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/sockets.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/inet.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/raw.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/udp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp_impl.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/icmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/snmp_msg.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/snmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/snmp_structs.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/autoip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/igmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/dns.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/timers.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/netif/etharp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/api.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netbuf.h
+timers.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/core/timers.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/timers.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/sys.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/sys_arch.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp_impl.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/icmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp_std.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcpip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/api_msg.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/igmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/api.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netifapi.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_frag.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/netif/etharp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/dhcp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/autoip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/dns.h
+def.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/core/def.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h
+autoip.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/core/ipv4/autoip.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h
+icmp.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/core/ipv4/icmp.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/icmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/inet_chksum.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/stats.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp_std.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/snmp.h
+igmp.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/core/ipv4/igmp.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h
+inet.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/core/ipv4/inet.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/inet.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h
+inet_chksum.o: \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/core/ipv4/inet_chksum.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/inet_chksum.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h
+ip_addr.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/core/ipv4/ip_addr.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h
+ip.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/core/ipv4/ip.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_frag.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/inet_chksum.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/icmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/igmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/raw.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/udp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp_impl.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/snmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/dhcp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/autoip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/stats.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp_std.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/perf.h
+ip_frag.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/core/ipv4/ip_frag.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_frag.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/inet_chksum.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/snmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/stats.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp_std.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/icmp.h
+api_lib.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/api/api_lib.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/api.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/sys.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/sys_arch.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcpip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/api_msg.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/igmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netifapi.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/timers.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp_std.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/raw.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/udp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/icmp.h
+api_msg.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/api/api_msg.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/api_msg.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/sys.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/sys_arch.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/igmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/api.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/udp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/icmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/raw.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp_std.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcpip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netifapi.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/timers.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/dns.h
+tcpip.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/api/tcpip.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/sys.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/sys_arch.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp_std.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcpip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/api_msg.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/igmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/api.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netifapi.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/timers.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/init.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/netif/etharp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/netif/ppp_oe.h
+err.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/api/err.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h
+sockets.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/api/sockets.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/sockets.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/inet.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/api.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/sys.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/sys_arch.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/igmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/icmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/raw.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/udp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcpip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/api_msg.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netifapi.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/timers.h
+netbuf.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/api/netbuf.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp_std.h
+netdb.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/api/netdb.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netdb.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h
+etharp.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/netif/etharp.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/stats.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp_std.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/snmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/dhcp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/autoip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/netif/etharp.h
+slipif.o: /home/peter/LWIP/contrib-1.4.1/../lwip/src/netif/slipif.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/netif/slipif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h
+lwip_chksum.o: /home/peter/LWIP/contrib-1.4.1/ports/unix/lwip_chksum.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/inet.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h
+perf.o: /home/peter/LWIP/contrib-1.4.1/ports/unix/perf.c \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/perf.h
+sys_arch.o: /home/peter/LWIP/contrib-1.4.1/ports/unix/sys_arch.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/sys.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/sys_arch.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/stats.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp_std.h
+unixif.o: /home/peter/LWIP/contrib-1.4.1/ports/unix/netif/unixif.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/stats.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp_std.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/netif/list.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/netif/unixif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/sys.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/sys_arch.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/timers.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/netif/tcpdump.h
+list.o: /home/peter/LWIP/contrib-1.4.1/ports/unix/netif/list.c \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/netif/list.h
+tcpdump.o: /home/peter/LWIP/contrib-1.4.1/ports/unix/netif/tcpdump.c \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/netif/tcpdump.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp_impl.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/icmp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/udp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/inet.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/inet_chksum.h
+fs.o: /home/peter/LWIP/contrib-1.4.1/apps/httpserver_raw/fs.c \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/apps/httpserver_raw/fs.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/apps/httpserver_raw/fsdata.h \
+ /home/peter/LWIP/contrib-1.4.1/apps/httpserver_raw/fsdata.c
+httpd.o: /home/peter/LWIP/contrib-1.4.1/apps/httpserver_raw/httpd.c \
+ /home/peter/LWIP/contrib-1.4.1/apps/httpserver_raw/httpd.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/opt.h lwipopts.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/debug.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/arch.h \
+ /home/peter/LWIP/contrib-1.4.1/ports/unix/include/arch/cc.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/err.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/pbuf.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/stats.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/mem.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/memp_std.h \
+ /home/peter/LWIP/contrib-1.4.1/apps/httpserver_raw/httpd_structs.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/tcp.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/def.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/ip_addr.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/lwip/netif.h \
+ /home/peter/LWIP/contrib-1.4.1/../lwip/src/include/ipv4/lwip/icmp.h \
+ /home/peter/LWIP/contrib-1.4.1/apps/httpserver_raw/fs.h
