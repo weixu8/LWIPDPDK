@@ -1,4 +1,4 @@
-#
+
 # Copyright (c) 2001, 2002 Swedish Institute of Computer Science.
 # All rights reserved. 
 # 
@@ -44,7 +44,7 @@ CFLAGS=-g -O0 -Wall -D$(ARCH) -DIPv4 -DLWIP_DEBUG -pedantic \
 # -ansi
 # -std=c89
 LDFLAGS=-lutil -pthread
-CONTRIBDIR=/home/peter/LWIP/contrib-1.4.1
+CONTRIBDIR=/home/peter/DPDK-LWIP/contrib-1.4.1
 LWIPARCH=$(CONTRIBDIR)/ports/unix
 ARFLAGS=rs
 

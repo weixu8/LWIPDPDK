@@ -41,6 +41,8 @@ include $(RTE_SDK)/mk/rte.vars.mk
 
 # binary name
 APP = http_server
+POSTCLEAN = delete
+PREBUILD = depend
 ARCH = linux
 LWIPDIR = $(CONTRIBDIR)/../lwip/src
 CONTRIBDIR = /home/peter/LWIP/contrib-1.4.1
@@ -65,6 +67,13 @@ endif
 
 include $(RTE_SDK)/mk/rte.app.mk
 
-delete: 
-	rm -f  _* *.map *.o http_server *.*.o.*
+depend: 
+	cd ../lwiplib; make
+	cd ../dpdk_app
+
+delete:
+	cd ../lwiplib; make clean
+	cd ../dpdk_app 
+	rm -f  _* *.map *.o http_server *.*.o.* 
+	rm -f \.*.o.d 
 	rm -r build

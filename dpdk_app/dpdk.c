@@ -1,4 +1,5 @@
-#include "dpdk.h"
+#include "http_server.h"
+
 int numa_on = 1;
 int promiscuous_on = 0;
 struct rte_eth_link link;
@@ -45,7 +46,32 @@ const struct rte_eth_txconf tx_conf = {
 	.tx_rs_thresh = 0,
 };
 struct ether_addr ports_eth_addr;
+void send_burst(__attribute__((unused)) struct lcore_conf* qconf, __attribute__((unused)) uint16_t len, __attribute__((unused)) uint8_t port) {
 
+
+}
+
+__attribute__((noreturn)) int dpdk_driver(__attribute__((unused)) void *dummy) {
+	unsigned lcoreid;
+	struct lcore_conf *qconf;
+	int nb_rx, j;
+	struct rte_mbuf *pkts_burst[MAX_PKT_BURST];
+	
+	lcoreid = rte_lcore_id();
+	qconf = &lcore_conf[lcoreid-START_CORE];
+
+	while (1) {
+		if(qconf->tx_mbufs.len != 0) {
+			send_burst(qconf, qconf->tx_mbufs.len, 0);
+			qconf->tx_mbufs.len = 0;
+		}
+		nb_rx = rte_eth_rx_burst(0, qconf->rx_queue_id, pkts_burst, MAX_PKT_BURST);
+		for (j=0; j < nb_rx; j++) {
+			send_to_lwip_network_stack(pkts_burst[j], 0); 
+		}
+	}		
+
+}
 
 int init_mem(void) {
 	int lcoreid = 0;

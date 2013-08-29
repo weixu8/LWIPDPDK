@@ -78,5 +78,7 @@ struct lcore_conf {
 
 int lcore_setup(void);
 int init_dpdk(int, char**);
+void send_burst(struct lcore_conf*, uint16_t, uint8_t);
 int init_mem(void);
+__attribute__((noreturn)) int dpdk_driver(__attribute__((unused)) void *);
 #endif
