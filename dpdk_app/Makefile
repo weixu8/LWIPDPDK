@@ -50,9 +50,7 @@ LWIPARCH= $(CONTRIBDIR)/ports/unix
 SRCS-y := dpdk.c http_server.c ../lwiplib/liblwip4.a ../lwiplib/liblwipapps.a
 
 CFLAGS += -Wall -D$(ARCH)
-CFLAGS += -pedantic -Wextra -Wshadow -Wbad-function-cast -Wc++-compat 
 CFLAGS += -I. -I$(CONTRIBDIR)/apps/httpserver_raw -I$(LWIPDIR)/include -I$(LWIPARCH)/include -I$(LWIPDIR)/include/ipv4 -I$(LWIPDIR) -I../lwiplib
-CFLAGS += -Wmissing-prototypes -Wredundant-decls
 CFLAGS += -O0
 CFLAGS += -g
 CFLAGS += $(WERROR_FLAGS)

@@ -49,9 +49,9 @@
 #define NUM_RX_QUEUES_PER_LCORE 1
 #define NB_SOCKETS 2 /*IF NUMA TURNED OFF, CHANGE TO 1*/
 
-#define NETMASK 255.255.255.0
-#define GATEWAY 198.162.52.254
-#define IP_ADDR 198.162.52.211
+#define NETMASK "255.255.255.0"
+#define GATEWAY "198.162.52.254"
+#define IP_ADDR "198.162.52.211"
 
 /*-------------------------------------------------------*/
 
@@ -60,13 +60,37 @@
 
 unsigned char ping_flag = 1;
 ip_addr_t ipaddr, netmask, gw;
- 
+
+__attribute__((noreturn)) int network_stack(__attribute__((unused)) void *dummy) {
+	while (1);
+} 
 
 int main(int argc, char** argv) {
 	int ret = 0;
+	int lcoreid = 0;
+	in_addr inaddr;
+
+	ret = init_dpdk(argc, argv);
 	argc -= ret;
 	argv += ret;	
-	printf("Hello\n");
+
+	inet_aton(IP_ADDR, &inaddr);
+	ipaddr.addr = inaddr.s_addr;
+	inet_aton(GATEWAY, &inaddr);
+	gw.addr = inaddr.s_addr;
+	inet_aton(NETMASK, &inaddr);
+	netmask.addr = inaddr.s_addr;
+
+	printf(" Host at %s mask %s gateway %s\n", IP_ADDR, NETMASK, GATEWAY);
+	printf(" Initializing LWIP TCP/IP Stack\n");
+
+ 	
+
+	rte_eal_mp_remote_launch(network_stack, NULL, CALL_MASTER);
+	RTE_LCORE_FOREACH_SLAVE(lcoreid) {
+		if(rte_eal_wait_lcore(lcoreid) <0) 
+			return -1;
+	}	
 	return 0;
 	
 }	
