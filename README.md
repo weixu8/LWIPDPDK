@@ -29,4 +29,4 @@ LWIPDPDK
 
    LWIP is compiled as a library in lwiplib/
   
-   DPDK is compiled using the dpdk app makefiles with some modifications is in dpdk_$app/ (the source codes are here). The http_server.c is the start of the program. 
+   DPDK is compiled using the dpdk app makefiles with some modifications is in dpdk_app/ (the source codes are here). The http_server.c is the start of the program. 
