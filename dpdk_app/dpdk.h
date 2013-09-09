@@ -41,6 +41,7 @@
 #include <rte_ip.h>
 #include <rte_string_fns.h>
 
+
 #define RX_PTHRESH 8
 #define RX_HTHRESH 8
 #define RX_WTHRESH 4
@@ -78,6 +79,9 @@ struct lcore_conf {
 
 int lcore_setup(void);
 int init_dpdk(int, char**);
+err_t dpdk_device_init(struct netif* );
+err_t dpdk_input(struct rte_mbuf*);
+err_t dpdk_output(struct netif*, struct pbuf*);
 void send_burst(struct lcore_conf*, uint16_t, uint8_t);
 int init_mem(void);
 __attribute__((noreturn)) int dpdk_driver(__attribute__((unused)) void *);

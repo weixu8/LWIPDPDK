@@ -17,5 +17,5 @@
 #include "lwip/raw.h"
 #include "dpdk.h"
 int main(int argc, char **argv);
-void send_to_lwip_network_stack(struct rte_mbuf*, uint8_t);
+void tcpip_init_done(void);
 #endif

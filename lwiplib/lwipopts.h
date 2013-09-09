@@ -172,7 +172,7 @@ a lot of data that needs to be copied, this should be set high. */
 #define TCP_SYNMAXRTX           4
 
 /* ---------- ARP options ---------- */
-#define LWIP_ARP                1
+#define LWIP_ARP                0
 #define ARP_TABLE_SIZE          10
 #define ARP_QUEUEING            1
 
@@ -180,7 +180,7 @@ a lot of data that needs to be copied, this should be set high. */
 /* Define IP_FORWARD to 1 if you wish to have the ability to forward
    IP packets across network interfaces. If you are going to run lwIP
    on a device with only one network interface, define this to 0. */
-#define IP_FORWARD              1
+#define IP_FORWARD             0 
 
 
 /* IP reassembly and segmentation.These are orthogonal even

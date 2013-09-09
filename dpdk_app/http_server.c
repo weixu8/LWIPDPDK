@@ -14,9 +14,18 @@
 
 unsigned char ping_flag = 1;
 ip_addr_t ipaddr, netmask, gw;
- 
-void send_to_lwip_network_stack(__attribute__((unused)) struct rte_mbuf* m, __attribute__((unused)) uint8_t portid) {
+struct netif netif;
 
+ 
+	
+
+void tcpip_init_done(void) {
+	netif_set_default(netif_add(&netif, &ipaddr, &netmask, &gw, NULL, dpdk_device_init, dpdk_input));
+	/*dpdk_device_init - initiation function for device: for us its already initiatied, we just have to fill out the netif LWIP struct*/
+	/*dpdk_input - input function to tcip/ip stack that device driver would call, default is tcpip_input, however, this uses mailboxes since it was more of an event model where threads did one thing and passed it off to another thread */
+	/*netif->state - initially set to NULL, but actually should contain the dpdk queue config information for this thread, will be set by dpdk_device_init*/
+	netif_set_up(&netif);
+	httpd_init();
 }
 
 int main(int argc, char** argv) {

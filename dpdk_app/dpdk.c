@@ -46,9 +46,46 @@ const struct rte_eth_txconf tx_conf = {
 	.tx_rs_thresh = 0,
 };
 struct ether_addr ports_eth_addr;
-void send_burst(__attribute__((unused)) struct lcore_conf* qconf, __attribute__((unused)) uint16_t len, __attribute__((unused)) uint8_t port) {
 
+err_t dpdk_device_init(struct netif* netif) {
+	struct lcore_conf *qconf;
+	lcoreid = rte_lcore_id();
+	qconf = &lcore_conf[lcoreid-START_CORE];
+	if (!qconf) {
+		return ERR_MEM;
+	}
+	netif->state = qconf;
+	netif->name[0] = 'd';
+	netif->name[1] = 'k';
+	netif->output = etharp_output; /*this might need to change since we statically coded the ip-ether addr pairing */
+	netif->linkoutput = dpdk_output;
+	netif->mtu = 1500;
+	netif->hwaddr_len = 6;
+	netif->flags = NETIF_FLAG_BROADCAST | NETIF_FLAG_IGMP; /*Not enabling ETHARP on this, so might need to change netif->output */
+	
+	return ERR_OK
+	
+}
+err_t dpdk_input(struct rte_mbuf*) {
 
+}
+
+err_t dpdk_output(struct netif *netif, struct pbuf *p) {
+
+}
+
+void send_burst(struct lcore_conf* qconf, uint16_t len, uint8_t port) {
+	struct rte_mbuf **m_table;
+	int ret;
+
+	m_table = (struct rte_mbuf **) qconf->tx_mbufs.m_table; 
+	ret = rte_eth_tx_burst(port, qconf->tx_queue_id, m_table, len);
+	if (unlikely(ret < n)) {
+		do {
+			rte_pktmbuf_free(m_table[ret]);
+		} while (++ret < n);
+
+	}
 }
 
 __attribute__((noreturn)) int dpdk_driver(__attribute__((unused)) void *dummy) {
@@ -60,6 +97,10 @@ __attribute__((noreturn)) int dpdk_driver(__attribute__((unused)) void *dummy) {
 	lcoreid = rte_lcore_id();
 	qconf = &lcore_conf[lcoreid-START_CORE];
 
+	/* Set up LWIP */
+	
+	tcpip_init(tcpip_init_done, NULL); 
+
 	while (1) {
 		if(qconf->tx_mbufs.len != 0) {
 			send_burst(qconf, qconf->tx_mbufs.len, 0);
@@ -67,7 +108,7 @@ __attribute__((noreturn)) int dpdk_driver(__attribute__((unused)) void *dummy) {
 		}
 		nb_rx = rte_eth_rx_burst(0, qconf->rx_queue_id, pkts_burst, MAX_PKT_BURST);
 		for (j=0; j < nb_rx; j++) {
-			send_to_lwip_network_stack(pkts_burst[j], 0); 
+			dpdk_input(pkts_burst[j]); 
 		}
 	}		
 
