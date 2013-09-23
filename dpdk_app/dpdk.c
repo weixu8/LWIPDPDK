@@ -88,14 +88,19 @@ err_t dpdk_input(struct rte_mbuf* m, struct netif* netif) {
 	switch(htons(ethhdr->type)) {
 	case ETHTYPE_IP:
 	case ETHTYPE_ARP:
-		//send upt the stack
+		//send up the stack, need to check if this frees p if successful
+		if(ethernet_input(p, netif) != ERR_OK) {
+			pbuf_free(p);
+			p = NULL;
+		} 
+		break;
 	default:
 		pbuf_free(p)
-		rte_pktmbuf_free(m);
 		break;	
 	}	
-		
-
+	/* In this implementation, each packet is processed completely before next one is grabbed, this could be problematic, however this way, we don't have to know when LWIP has finished with the packet and makes rte_pktmbuf_free simpler*/		
+	/* Alternatively, we'll have to incorporate rte_pktmbuf_free(m) into LWIP, or run a clean up thread that clears out rte_pktmbuf once its refcnt goes to 0*/
+	rte_pktmbuf_free(m);
 }
 
 err_t dpdk_output(struct netif *netif, struct pbuf *p) {
