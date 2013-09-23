@@ -70,21 +70,22 @@ sys_mutex_t lock_tcpip_core;
  *
  * @param arg unused argument
  */
-static void
+static netif*
 tcpip_thread(void *arg)
 {
-  struct tcpip_msg *msg;
-  LWIP_UNUSED_ARG(arg);
+ // struct tcpip_msg *msg;
+//  LWIP_UNUSED_ARG(arg);
 
   if (tcpip_init_done != NULL) {
-    tcpip_init_done(tcpip_init_done_arg);
+    return tcpip_init_done(tcpip_init_done_arg);
   }
-
+  return NULL; 
+/*
   LOCK_TCPIP_CORE();
-  while (1) {                          /* MAIN Loop */
+  while (1) {                          // MAIN Loop 
     UNLOCK_TCPIP_CORE();
     LWIP_TCPIP_THREAD_ALIVE();
-    /* wait for a message, timeouts are processed while waiting */
+    // wait for a message, timeouts are processed while waiting 
     sys_timeouts_mbox_fetch(&mbox, (void **)&msg);
     LOCK_TCPIP_CORE();
     switch (msg->type) {
@@ -93,7 +94,7 @@ tcpip_thread(void *arg)
       LWIP_DEBUGF(TCPIP_DEBUG, ("tcpip_thread: API message %p\n", (void *)msg));
       msg->msg.apimsg->function(&(msg->msg.apimsg->msg));
       break;
-#endif /* LWIP_NETCONN */
+#endif // LWIP_NETCONN 
 
 #if !LWIP_TCPIP_CORE_LOCKING_INPUT
     case TCPIP_MSG_INPKT:
@@ -102,20 +103,20 @@ tcpip_thread(void *arg)
       if (msg->msg.inp.netif->flags & (NETIF_FLAG_ETHARP | NETIF_FLAG_ETHERNET)) {
         ethernet_input(msg->msg.inp.p, msg->msg.inp.netif);
       } else
-#endif /* LWIP_ETHERNET */
+#endif //  LWIP_ETHERNET 
       {
         ip_input(msg->msg.inp.p, msg->msg.inp.netif);
       }
       memp_free(MEMP_TCPIP_MSG_INPKT, msg);
       break;
-#endif /* LWIP_TCPIP_CORE_LOCKING_INPUT */
+#endif // LWIP_TCPIP_CORE_LOCKING_INPUT 
 
 #if LWIP_NETIF_API
     case TCPIP_MSG_NETIFAPI:
       LWIP_DEBUGF(TCPIP_DEBUG, ("tcpip_thread: Netif API message %p\n", (void *)msg));
       msg->msg.netifapimsg->function(&(msg->msg.netifapimsg->msg));
       break;
-#endif /* LWIP_NETIF_API */
+#endif // LWIP_NETIF_API 
 
 #if LWIP_TCPIP_TIMEOUT
     case TCPIP_MSG_TIMEOUT:
@@ -128,7 +129,7 @@ tcpip_thread(void *arg)
       sys_untimeout(msg->msg.tmo.h, msg->msg.tmo.arg);
       memp_free(MEMP_TCPIP_MSG_API, msg);
       break;
-#endif /* LWIP_TCPIP_TIMEOUT */
+#endif // LWIP_TCPIP_TIMEOUT 
 
     case TCPIP_MSG_CALLBACK:
       LWIP_DEBUGF(TCPIP_DEBUG, ("tcpip_thread: CALLBACK %p\n", (void *)msg));
@@ -146,7 +147,7 @@ tcpip_thread(void *arg)
       LWIP_ASSERT("tcpip_thread: invalid message", 0);
       break;
     }
-  }
+  }*/
 }
 
 /**

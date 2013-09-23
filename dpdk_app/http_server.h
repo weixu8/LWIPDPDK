@@ -17,5 +17,5 @@
 #include "lwip/raw.h"
 #include "dpdk.h"
 int main(int argc, char **argv);
-void tcpip_init_done(void);
+netif* tcpip_init_done(void);
 #endif

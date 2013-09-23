@@ -66,7 +66,35 @@ err_t dpdk_device_init(struct netif* netif) {
 	return ERR_OK
 	
 }
-err_t dpdk_input(struct rte_mbuf*) {
+err_t dpdk_input(struct rte_mbuf* m, struct netif* netif) {
+	
+	struct pbuf *p;
+	uint16_t len;
+	struct eth_hdr *ethhdr;
+	len = m->pkt.pkt_len;
+	p = pbuf_alloc(PBUF_RAW, len, PBUF_POOL);
+
+	if (p != NULL) {
+		/*assuming 2048 bytes is enough for independent data packets*/
+		p->payload = m->pkt.data;	
+	}	
+	else {
+		pbuf_free(p); /*memp uses an array with varying size interval inside the array to allocate memory (this array is in heap), seems to just reset the index so that the array can be written over*/
+		rte_pktmbuf_free(m);  
+		printf("Packet Dropped\n");	
+	}
+	ethhdr = (struct eth_hdr *)p->payload;
+
+	switch(htons(ethhdr->type)) {
+	case ETHTYPE_IP:
+	case ETHTYPE_ARP:
+		//send upt the stack
+	default:
+		pbuf_free(p)
+		rte_pktmbuf_free(m);
+		break;	
+	}	
+		
 
 }
 
@@ -93,13 +121,14 @@ __attribute__((noreturn)) int dpdk_driver(__attribute__((unused)) void *dummy) {
 	struct lcore_conf *qconf;
 	int nb_rx, j;
 	struct rte_mbuf *pkts_burst[MAX_PKT_BURST];
+	struct netif* netif;
 	
 	lcoreid = rte_lcore_id();
 	qconf = &lcore_conf[lcoreid-START_CORE];
 
 	/* Set up LWIP */
 	
-	tcpip_init(tcpip_init_done, NULL); 
+	netif = tcpip_init(tcpip_init_done, NULL); 
 
 	while (1) {
 		if(qconf->tx_mbufs.len != 0) {
@@ -108,7 +137,7 @@ __attribute__((noreturn)) int dpdk_driver(__attribute__((unused)) void *dummy) {
 		}
 		nb_rx = rte_eth_rx_burst(0, qconf->rx_queue_id, pkts_burst, MAX_PKT_BURST);
 		for (j=0; j < nb_rx; j++) {
-			dpdk_input(pkts_burst[j]); 
+			dpdk_input(pkts_burst[j], netif); 
 		}
 	}		
 

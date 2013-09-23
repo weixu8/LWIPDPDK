@@ -58,7 +58,7 @@
 #define NB_SOCKETS 2
 #define MAX_PKT_BURST 32 /*INDIVIDUAL CACHE SIZE OF EACH CORE - can be changed*/
 #define START_CORE 0
-#define NUM_LCORE 8
+#define NUM_LCORE 1 
 
 #define NB_MBUF 8192
 #define MBUF_SIZE (2048 + sizeof(struct rte_mbuf) + RTE_PKTMBUF_HEADROOM)
@@ -80,7 +80,7 @@ struct lcore_conf {
 int lcore_setup(void);
 int init_dpdk(int, char**);
 err_t dpdk_device_init(struct netif* );
-err_t dpdk_input(struct rte_mbuf*);
+err_t dpdk_input(struct rte_mbuf*, struct netif*);
 err_t dpdk_output(struct netif*, struct pbuf*);
 void send_burst(struct lcore_conf*, uint16_t, uint8_t);
 int init_mem(void);
